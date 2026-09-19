@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://text-to-speech-app-fgu4.onrender.com/api";
 
 const MAX_TEXT_LENGTH = 50;
 
