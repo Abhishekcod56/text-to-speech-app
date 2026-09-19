@@ -1,0 +1,506 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6fa;
+  color: #18181b;
+}
+
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 25px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  color: #18181b;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.card {
+  width: 100%;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #27272a;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 9px;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea {
+  display: block;
+
+  width: 100%;
+  min-height: 220px;
+
+  padding: 15px;
+
+  resize: vertical;
+
+  border: 1px solid #d9dce3;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #18181b;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus {
+  border-color: #635bff;
+
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
+}
+
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+
+/* =========================
+   TEXT INFO
+========================= */
+
+.text-info {
+  margin-top: 8px;
+
+  text-align: right;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+select {
+  display: block;
+
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d9dce3;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #18181b;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+select:focus {
+  border-color: #635bff;
+
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
+}
+
+select:disabled {
+  background: #f4f4f5;
+
+  color: #9ca3af;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.error {
+  width: 100%;
+
+  margin: 15px 0;
+
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 9px;
+
+  background: #fef2f2;
+
+  color: #b91c1c;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success {
+  width: 100%;
+
+  margin: 15px 0;
+
+  padding: 12px 14px;
+
+  border: 1px solid #bbf7d0;
+  border-radius: 9px;
+
+  background: #f0fdf4;
+
+  color: #15803d;
+
+  font-size: 13px;
+}
+
+
+/* ==================================================
+   GENERATE + CLEAR BUTTONS
+================================================== */
+
+
+
+/* Both buttons */
+
+.buttons button {
+  flex: 1 1 0 !important;
+
+  width: 50% !important;
+
+  min-width: 0;
+
+  min-height: 50px;
+
+  margin: 0 !important;
+
+  padding: 14px 20px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+
+.generate-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(99, 91, 255, 0.25);
+}
+
+.generate-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+
+
+.clear-button:hover:not(:disabled) {
+  background: #f7f7f9 !important;
+
+  border-color: #c7c9d1 !important;
+
+  transform: translateY(-2px);
+}
+
+.clear-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* ==================================================
+   GENERATED AUDIO SECTION
+================================================== */
+
+
+/* =========================
+   AUDIO TITLE
+========================= */
+
+.audio-section h2 {
+  margin: 0 0 18px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #18181b;
+}
+
+
+/* ==================================================
+   AUDIO PLAYER
+================================================== */
+
+
+
+
+/* ==================================================
+   DOWNLOAD BUTTON
+================================================== */
+
+
+.download-button:hover {
+  background: #f7f7f9 !important;
+
+  border-color: #c7c9d1 !important;
+
+  transform: translateY(-2px);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 20px 12px;
+  }
+
+  .header {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  textarea {
+    min-height: 180px;
+  }
+
+
+  /* Stack buttons on small screens */
+
+
+
+  .buttons button,
+  .generate-button,
+  .clear-button {
+    width: 100% !important;
+  }
+
+
+}
+/* =========================================
+   FINAL BUTTON + AUDIO LAYOUT
+========================================= */
+
+.buttons {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  column-gap: 30px !important;
+  width: 100% !important;
+  margin: 30px 0 !important;
+}
+
+.buttons .generate-button,
+.buttons .clear-button {
+  display: block !important;
+  width: 100% !important;
+  height: 55px !important;
+  margin: 0 !important;
+  padding: 0 20px !important;
+  border-radius: 10px !important;
+  box-sizing: border-box !important;
+}
+
+
+/* Generate */
+
+.buttons .generate-button {
+  background: #635bff !important;
+  color: white !important;
+  border: 0 !important;
+}
+
+
+/* Clear */
+
+.buttons .clear-button {
+  background: white !important;
+  color: #333 !important;
+  border: 2px solid #cccccc !important;
+}
+
+
+/* Audio */
+
+.audio-section {
+  display: block !important;
+  width: 100% !important;
+  margin: 40px 0 0 !important;
+  padding: 30px 0 0 !important;
+  border-top: 2px solid #eeeeee !important;
+}
+
+.audio-section h2 {
+  margin: 0 0 20px !important;
+}
+
+.audio-section .audio-player {
+  display: block !important;
+  width: 100% !important;
+  height: 55px !important;
+  margin: 0 !important;
+}
+
+
+/* Download */
+
+.audio-section .download-button {
+  display: block !important;
+  width: 100% !important;
+  height: 52px !important;
+  margin: 25px 0 0 !important;
+  padding: 0 !important;
+  background: white !important;
+  color: #333 !important;
+  border: 2px solid #cccccc !important;
+  border-radius: 10px !important;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .buttons {
+    grid-template-columns: 1fr !important;
+    row-gap: 15px !important;
+  }
+}
+
+ 
