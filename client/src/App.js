@@ -62,7 +62,7 @@ function App() {
 
       // Select English voice by default
       const englishVoice = data.voices?.find(
-        (voice) => voice.language === "English"
+        (voice) => voice.language === "en"
       );
 
       if (englishVoice) {
